@@ -1,0 +1,27 @@
+<footer id="footer" class="navbar navbar-default" data-hook>
+
+<div class="container">
+  <nav>
+  	<ul class="nav navbar-nav navbar-left">
+      <li><%= link_to 'Terms of Use', main_app.termsofuse_path %></li>
+      <li><%= link_to 'Privacy Policy', main_app.privacypolicy_path %></li>
+
+  		<% if spree_current_user %>
+  			<li><%= link_to Spree.t(:Dashboard), spree.admin_products_path %>
+  			</li>
+  			<li><%= link_to Spree.t(:Logout), spree.admin_logout_path %>
+  			</li>
+  		<% else %>
+  			<li><%= link_to Spree.t(:Admin_Login), spree.admin_login_path %>
+  			</li>
+  		<% end %>
+  	</ul>
+
+    <div class="text-right" data-hook>
+      <p>© 2000-2016 electricalsurplus.net</p>
+    </div>
+
+  </nav>
+</div> 
+
+</footer>

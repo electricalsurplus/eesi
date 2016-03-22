@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require spree/frontend
+
+ *= require_self
+ *= require_tree .
+*/
+h1 {
+  text-transform: uppercase; }
+
+li {
+  list-style-type: none; }
+
+div.well {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+
+nav {
+  text-transform: uppercase; }
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: #5c789a;
+  color: #ffffff; }
+
+nav#top-nav.navbar {
+  margin-bottom: 0px;
+  padding-bottom: 20px;
+  background-color: #f0f0f0; }
+
+nav#main-nav.navbar {
+  background-color: #232F3E; }
+
+#main-nav.navbar-default .navbar-nav > li > a {
+  color: #f0f0f0; }
+
+footer#footer {
+  background-color: #232F3E;
+  margin-top: 20px;
+  margin-bottom: 0; }
+
+div.text-right {
+  color: #777;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.table {
+  margin-bottom: 0;
+  border-top: 1px solid #ddd; }
+
+.table > tbody > tr > td {
+  border-top: none; }
+
+a {
+  color: #5c789a; }
+
+a:hover {
+  text-decoration: none; }
+
+.title {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center; }
+
+h2 {
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap; }
+
+a.title {
+  border: 4px solid white;
+  padding: 10px; }
+
+a.title:hover {
+  border: 4px solid #000;
+  padding: 10px;
+  color: #000;
+  text-decoration: none !important; }
+
+div#mc_embed_signup.container {
+  background-color: #f0f0f0;
+  width: auto;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 20px; }
+
+.btn-default {
+  color: #f0f0f0;
+  background-color: #232F3E;
+  text-transform: uppercase; }
+
+.btn-default:hover {
+  color: #f0f0f0;
+  background-color: #5c789a;
+  text-transform: uppercase; }
+
+/*# sourceMappingURL=all.css.css.map */

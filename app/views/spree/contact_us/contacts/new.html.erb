@@ -1,0 +1,39 @@
+<% content_for :head do -%>
+  <meta name="title" content="<%= Spree.t(:contact_us_title) %>">
+<% end -%>
+
+<% content_for :sidebar do 
+   if "products" == @current_controller && @taxon %>
+    <%= render :partial => "spree/shared/filters" %>
+  <% else %>
+    <%= render :partial => "spree/shared/taxonomies" %>
+  <% end
+ end %>
+
+
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
+
+<h1><%= Spree.t(:contact_us_title) %></h1>
+<%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
+
+    <p>
+      <%= f.text_field :name, class: 'required form-control', placeholder: 'name' %>
+    </p>
+
+  <p>
+    <%= f.email_field :email, class: 'required form-control email', placeholder: 'email' %>
+  </p>
+  <% if SpreeContactUs.require_subject %>
+    <p>
+      <%= f.text_field :subject, class: 'required form-control', placeholder: 'subject' %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.text_area :message, class: 'required form-control', placeholder: 'message' %>
+  </p>
+  <p>
+    <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit), class: 'btn btn-default' %>
+  </p>
+<% end %>
+
+<%= render 'layouts/contact' %>

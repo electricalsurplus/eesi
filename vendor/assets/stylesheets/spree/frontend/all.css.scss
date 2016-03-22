@@ -1,0 +1,128 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require spree/frontend
+
+ *= require_self
+ *= require_tree .
+*/
+
+h1 {
+	text-transform: uppercase;	
+}
+
+li {
+	list-style-type: none;
+}
+
+div.well {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+
+///// NAVBAR \\\\\
+
+nav {
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #5c789a;
+    color: #ffffff;
+}
+
+// TOP-NAV \\
+
+nav#top-nav.navbar {
+	margin-bottom: 0px;
+	padding-bottom: 20px;
+	background-color: #f0f0f0;
+}
+
+// MAIN-NAV \\
+
+nav#main-nav.navbar {
+	background-color: #232F3E;
+}
+
+#main-nav.navbar-default .navbar-nav > li > a {
+    color: #f0f0f0;
+}
+
+///// FOOTER /////
+
+footer#footer {
+	background-color: #232F3E;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+div.text-right {
+	color: #777;
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/////// PRODUCT PAGE \\\\\\
+
+.table {
+	margin-bottom: 0;
+	border-top: 1px solid #ddd;
+}
+
+.table > tbody > tr > td {
+    border-top: none;
+}
+
+a {
+	color: #5c789a;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+////// HOME PAGE JUMBOTRON \\\\\\
+
+.jumbotron {
+    position: relative;
+    background-image: asset-data-url("industrial.png");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.jumbotron h1, h3 {
+	color: #fff;
+	text-transform: uppercase;
+}
+
+
+
+////// SIGN UP FORM \\\\\\
+
+div#mc_embed_signup.container {
+	background-color: #f0f0f0;
+	width: auto;
+	margin: auto;
+	margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 20px;
+}
+
+.btn-default {
+	color: #f0f0f0;
+    background-color: #232F3E;
+    text-transform: uppercase;
+}
+
+.btn-default:hover {
+	color: #f0f0f0;
+    background-color: #5c789a;
+    text-transform: uppercase;
+}
+

@@ -32,6 +32,9 @@ gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us', branch: '3-0-s
 gem 'stripe'
 gem "figaro"
 
+gem 'paperclip'
+gem 'aws-sdk', '< 2.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

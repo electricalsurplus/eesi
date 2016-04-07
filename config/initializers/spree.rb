@@ -15,37 +15,35 @@ Spree.config do |config|
   # config.track_inventory_levels = false
   
   #S3 configuration
-  if Rails.env.production? then
-    #production. Store images on S3.
-    # development will default to local storage
-    attachment_config = {
-    s3_credentials: {
-      access_key_id: ENV["AKIAIYHK5Z3LSQTG2J4A"],
-      secret_access_key: ENV["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"],
-      bucket: ENV["electricalsurplus"],
-    },
-      
-    storage:        :s3,
-    s3_headers:     { "Cache-Control" => "max-age=31557600" },
-    s3_protocol:    "https",
-    bucket:         ENV["electricalsurplus"],
-    
-    styles: {
+  attachment_config = {
+
+  s3_credentials: {
+    access_key_id:     ENV['AKIAIYHK5Z3LSQTG2J4A'],
+    secret_access_key: ENV['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'],
+    bucket:            ENV['electricalsurplus']
+  },
+  
+  storage:        :s3,
+  s3_headers:     { "Cache-Control" => "max-age=31557600" },
+  s3_protocol:    "https",
+  bucket:         ENV['electricalsurplus'],
+  url:            ":s3_domain_url",
+  
+  styles: {
     mini:     "48x48>",
     small:    "100x100>",
     product:  "240x240>",
     large:    "600x600>"
-    },
+  },
+  
+  path:           "/:class/:id/:style/:basename.:extension",
+  default_url:    "/:class/:id/:style/:basename.:extension",
+  default_style:  "product"
+}
 
-    path:          ":rails_root/public/:class/:attachment/:id/:style/:basename.:extension",
-    default_url:   "/:class/:attachment/:id/:style/:basename.:extension",
-    default_style: "product",
-    }
-
-    attachment_config.each do |key, value|
-      Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
-    end
-  end  
+  attachment_config.each do |key, value|
+    Spree::Image.attachment_definitions[:attachment][key.to_sym] = value
+  end 
 end
 
 Spree.user_class = "Spree::User"

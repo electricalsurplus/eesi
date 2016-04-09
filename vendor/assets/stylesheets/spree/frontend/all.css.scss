@@ -85,6 +85,12 @@ a:hover {
 	text-decoration: none;
 }
 
+////// PRODUCT DETAILS PAGE \\\\\\
+
+input#quantity.title.form-control {
+    color: #404042;
+}
+
 ////// HOME PAGE JUMBOTRON \\\\\\
 
 .jumbotron {
@@ -114,6 +120,8 @@ div#mc_embed_signup.container {
     padding-bottom: 20px;
 }
 
+////// BOOTSTRAP BTN \\\\\\
+
 .btn-default {
 	color: #f0f0f0;
     background-color: #232F3E;
@@ -126,3 +134,15 @@ div#mc_embed_signup.container {
     text-transform: uppercase;
 }
 
+.btn-success {
+    color: #f0f0f0;
+    background-color: #232F3E;
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn-success:hover {
+    color: #f0f0f0;
+    background-color: #5c789a;
+    border: none;
+}

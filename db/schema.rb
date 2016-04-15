@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217194372) do
+ActiveRecord::Schema.define(version: 20160415182031) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -373,6 +373,16 @@ ActiveRecord::Schema.define(version: 20160217194372) do
   add_index "spree_product_option_types", ["option_type_id"], name: "index_spree_product_option_types_on_option_type_id"
   add_index "spree_product_option_types", ["position"], name: "index_spree_product_option_types_on_position"
   add_index "spree_product_option_types", ["product_id"], name: "index_spree_product_option_types_on_product_id"
+
+  create_table "spree_product_packages", force: :cascade do |t|
+    t.integer  "product_id",             null: false
+    t.integer  "length",     default: 0, null: false
+    t.integer  "width",      default: 0, null: false
+    t.integer  "height",     default: 0, null: false
+    t.integer  "weight",     default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "spree_product_properties", force: :cascade do |t|
     t.string   "value"

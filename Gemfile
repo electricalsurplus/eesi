@@ -3,10 +3,14 @@ ruby '2.3.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
-
+group :development, :test do
+  gem 'sqlite3'
+end
 # Use postgresql as the database for production
-gem 'pg'
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
 # Use SCSS for stylesheets
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'

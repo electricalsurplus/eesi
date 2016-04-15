@@ -29,7 +29,7 @@ gem 'spree', '3.0.5'
 gem 'spree_gateway', github: 'spree/spree_gateway', branch: '3-0-stable'
 gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 gem 'spree_contact_us', github: 'spree-contrib/spree_contact_us', branch: '3-0-stable'
-gem 'spree_active_shipping', github: 'spree-contrib/spree_active_shipping', branch: '3-0-stable'
+
 
 gem 'stripe'
 gem "figaro"

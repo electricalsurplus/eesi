@@ -1,4 +1,13 @@
 GIT
+  remote: git://github.com/spree-contrib/spree_active_shipping.git
+  revision: 05d19a7d271e65f788a58d74ff9a7a8552b3e594
+  branch: 3-0-stable
+  specs:
+    spree_active_shipping (3.0.0.beta)
+      active_shipping (~> 1.4.2)
+      spree_core (~> 3.0.0)
+
+GIT
   remote: git://github.com/spree-contrib/spree_contact_us.git
   revision: 4089e70ef39e0a5f7e48fc505abec2259e0afbfc
   branch: 3-0-stable
@@ -48,6 +57,14 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
+    active_shipping (1.4.3)
+      active_utils (~> 3.0.0)
+      activesupport (>= 3.2, < 5.0.0)
+      nokogiri (>= 1.6)
+      quantified (~> 1.0.1)
+    active_utils (3.0.0)
+      activesupport (>= 3.2)
+      i18n
     activejob (4.2.5)
       activesupport (= 4.2.5)
       globalid (>= 0.3.0)
@@ -193,6 +210,7 @@ GEM
       actionmailer (>= 3, < 6)
       premailer (~> 1.7, >= 1.7.9)
     puma (3.4.0)
+    quantified (1.0.1)
     rabl (0.11.8)
       activesupport (>= 2.3.14)
     rack (1.6.4)
@@ -379,6 +397,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spree (= 3.0.5)
+  spree_active_shipping!
   spree_auth_devise!
   spree_contact_us!
   spree_gateway!

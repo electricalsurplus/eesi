@@ -47,3 +47,9 @@ Spree.config do |config|
 end
 
 Spree.user_class = "Spree::User"
+
+Spree::ActiveShipping::Config.set(:usps_login => "mellongo623")
+Spree::ActiveShipping::Config.set(:origin_country => "US")
+Spree::ActiveShipping::Config.set(:origin_state => "AZ")
+Spree::ActiveShipping::Config.set(:origin_city => "Glendale")
+Spree::ActiveShipping::Config.set(:origin_zip => "85301")

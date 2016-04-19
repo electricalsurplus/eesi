@@ -56,3 +56,9 @@ Spree.user_class = "Spree::User"
 #   Spree::ActiveShipping::Config.set(:origin_city => "Glendale")
 #   Spree::ActiveShipping::Config.set(:origin_zip => "85301")
 # end
+
+  Spree::ActiveShipping::Config.set(:usps_login => "348ELECT2642")
+  Spree::ActiveShipping::Config.set(:fedex_login => "118720586")
+  Spree::ActiveShipping::Config.set(:fedex_password => "2CWdcYUivgz030GZoXOCWEQnG")
+  Spree::ActiveShipping::Config.set(:fedex_account => "510087747")
+  Spree::ActiveShipping::Config.set(:fedex_key => "OInNzAGzdFa5byaO")

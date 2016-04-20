@@ -146,3 +146,20 @@ div#mc_embed_signup.container {
     background-color: #5c789a;
     border: none;
 }
+
+////// GUEST CHECKOUT FIX \\\\\\
+
+input#order_email.form-control.title {
+    position: inherit;
+    top: auto;
+    left: auto;
+    transform: none;
+    color: #555555;
+    text-align: left;
+}
+
+////// ADD TO CART FIX \\\\\\
+
+input#quantity.title.form-control {
+    margin-top: 34px;
+}
